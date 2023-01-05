@@ -12,6 +12,7 @@ comments: on
 {%@define The_Open_Source_Definition=https://en.wikipedia.org/wiki/The_Open_Source_Definition%}
 {%@define Creative_Commons_license=https://en.wikipedia.org/wiki/Creative_Commons_license%}
 {%@define BLIND_ELEPHANT=https://en.wikipedia.org/wiki/Blind_men_and_an_elephant%}
+{%@define Doc_As_Code=https://www.writethedocs.org/guide/docs-as-code/%}
 
 {%articleDisclaimer%}
 {%section Introduction%}
@@ -96,21 +97,53 @@ What about blogs?
 What will make this blog to be open source?
 
 * It is open for collaboration.
-
 * Source code is included.
-
 * Blog content is free to redistribute.
-
 * The license allows modification.
-
 * Supports the integrity of the author's code.
-
 * No discrimination against persons or groups.
-
 * No discrimination against fields of endeavor.
-
 * Distribution of license.
-
 * License must not be specific to a product.
 * License must not restrict other software.
 * License must be technology-neutral.
+
+In the following sections I will look at these aspects.
+
+{%section It is open for collaboration%}
+
+This is the most important aspect of open source blogging.
+You can use the content of this blog according to the CC-BY license terms.
+It allows any practically any use, even commercial, so long you attribute the source.
+
+But that is the rear end of the elephant.
+We are interested in feeding the elephant.
+
+This blog is maintained in a link:{%Doc_As_Code%}[Doc as Code] style.
+The blog is edited using a markup.
+The selected markup is Asciidoc, and I am also use the Jamal preprocessor.
+The article source files are `.adoc.jam` files.
+
+The source is maintained on GitHub in a public repository.
+It means that you can look at any article.
+Not only those, which are already published, but also the articles which are under constructions.
+You can also have a look at the history of article editing.
+
+Articles are created, edited for days, sometimes for weeks.
+It is similar to program features.
+Not to interfere with the already released article set these article sources are maintained in separate branches.
+GitHub makes it possible for you to list all of these branches and to have a look at what is cooking.
+
+In addition to that you can fork the repository, create a new articles, suggest modifications to any article creating a pull request.
+True to the open-source philosophy I will consider every pull request.
+
+{%section Source code is included%}
+{%section Blog content is free to redistribute%}
+{%section The license allows modification%}
+{%section Supports the integrity of the author's code%}
+{%section No discrimination against persons or groups%}
+{%section No discrimination against fields of endeavor%}
+{%section Distribution of license%}
+{%section License must not be specific to a product%}
+{%section License must not restrict other software%}
+{%section License must be technology-neutral%}
