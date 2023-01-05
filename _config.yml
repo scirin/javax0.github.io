@@ -30,6 +30,8 @@ domain: javax0.github.io
 url: https://javax0.github.io
 # baseurl: /
 
+future: true
+
 # Build settings
 theme: minima
 plugins:

@@ -1,0 +1,116 @@
+---
+title: Open Source Blog
+layout: posta
+comments: on
+---
+{%#define ARTICLE={%#file (format="$bareNaked"){%@pos.file%}%}%}
+{%@import javax0.jim%}
+{%@comment
+=========================================================================================
+%}
+
+{%@define The_Open_Source_Definition=https://en.wikipedia.org/wiki/The_Open_Source_Definition%}
+{%@define Creative_Commons_license=https://en.wikipedia.org/wiki/Creative_Commons_license%}
+{%@define BLIND_ELEPHANT=https://en.wikipedia.org/wiki/Blind_men_and_an_elephant%}
+
+{%articleDisclaimer%}
+{%section Introduction%}
+
+This article about the philosophy behind the ide of creating an opensource blog.
+The article will discuss
+
+* what an open-source blog means
+
+
+{%section What is an Open-Source Blog?%}
+
+We know what an open-source software (OSS) is.
+It is many things.
+
+* OSS is free to redistribute.
+* Source code is included.
+* The license allows modification.
+* Supports the integrity of the author's code.
+* No discrimination against persons or groups.
+* No discrimination against fields of endeavor.
+* Distribution of license.
+* License must not be specific to a product.
+* License must not restrict other software.
+* License must be technology-neutral.
+
+(source link:{%The_Open_Source_Definition%}[Wikipedia, Open Source Definition]])
+
+The initiative of OSS was extended to documentation, for example the GNU Free Documentation License.
+The most well known such licensing scheme is the link:{%Creative_Commons_license%}[Creative Commons License].
+
+These mainly focus on the rights and the way the product is used.
+It is extremely important, and there is a good reason that most approaches look at this side of OSS and documentation.
+This side regulates the use and the way how OSS creates value in the economy.
+
+For me, as a developer the other side is more important.
+
+Let me use the well known parable link:{%BLIND_ELEPHANT%}[about the blind men and the elephant].
+Everybody touches different part of the elephant and has different opinion about what an elephant is.
+The industry is mainly interested in the fertilizing output that comes out of the OSS ecosystem.
+I stay more at the other end of the elephant, at the trunk, and the mouth that feeds the animal.
+I drew a picture of an elephant showing the developer side:
+
+image:elephant.png[]
+
+When we create open-source software we usually do it for fun.
+This is why I was drawing the elephant.
+It is fun.
+In a commercial project you never do that.
+
+Also, open source, for me is cooperation.
+We do it together.
+There is a  team of developers, and we develop the software together.
+Other people use the software, and few start to complain.
+
+[%collapsible,title="Four Levels of OSS Developer Success (click to open)"]
+====
+. You create a project and no-one notices.
+This is always how it starts, but even this is fun.
+Creating software is fun.
+If it is not fun, then don't do it.
+. Some people start to use your software.
+You do not know about it, because they do not give you feedback.
+You just google your project name, and you may see it mentioned, appearing at places.
+. People start asking stupid and annoying questions.
+This is the real success.
+People believe that your software is so good that they invest effort asking when they cannot get along themselves.
+Your users are introvert developers.
+From their side asking is a huge effort.
+. There are hate posts about your software.
+This is the ultimate success.
+Some people write about why your software should not be used.
+I personally could never reach this level with any of my projects.
+
+This is when you start your OSS project.
+When you join an already running OSS project it is different.
+In that case you jump on an already running train... sorry: elephant.
+Your name gets to the list of developers, and you can be proud that your little, but important change was added to the project.
+====
+
+What about blogs?
+What will make this blog to be open source?
+
+* It is open for collaboration.
+
+* Source code is included.
+
+* Blog content is free to redistribute.
+
+* The license allows modification.
+
+* Supports the integrity of the author's code.
+
+* No discrimination against persons or groups.
+
+* No discrimination against fields of endeavor.
+
+* Distribution of license.
+
+* License must not be specific to a product.
+* License must not restrict other software.
+* License must be technology-neutral.
