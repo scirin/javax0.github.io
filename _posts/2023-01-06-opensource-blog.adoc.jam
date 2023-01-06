@@ -13,6 +13,7 @@ comments: on
 {%@define Creative_Commons_license=https://en.wikipedia.org/wiki/Creative_Commons_license%}
 {%@define BLIND_ELEPHANT=https://en.wikipedia.org/wiki/Blind_men_and_an_elephant%}
 {%@define Doc_As_Code=https://www.writethedocs.org/guide/docs-as-code/%}
+{%@define JAVAX0_GITHUB=https://github.com/javax0/javax0.github.io%}
 
 {%articleDisclaimer%}
 {%section Introduction%}
@@ -110,6 +111,16 @@ What will make this blog to be open source?
 
 In the following sections I will look at these aspects.
 
+There is no separate section in this article for
+
+* The license allows modification
+* Distribution of license
+* License must not be specific to a product
+* License must not restrict other software
+* License must be technology-neutral
+
+There are provided by the CC-BY license governing the content of the blog.
+
 {%section It is open for collaboration%}
 
 This is the most important aspect of open source blogging.
@@ -138,12 +149,70 @@ In addition to that you can fork the repository, create a new articles, suggest 
 True to the open-source philosophy I will consider every pull request.
 
 {%section Source code is included%}
+
+This is almost evident in the case of documentation, or blogs.
+The source is the text itself, isn't it?
+
+Usually it is, but that is a mistake.
+It is like programming in machine code.
+
+When you code in machine code the binary is the source code.
+We don't do that.
+The reason: it is difficult and involves a lot of mechanical work that can be done by the computers.
+We program in high level languages.
+
+When we document we still create the documentation in "machine code" to some extent.
+Maybe, the level we are in is not machine code.
+After all, you do not edit a PDF binary.
+What we usually do is assembly level.
+
+The better approach is to use tools write the documentation on high level.
+Do NOT copy and paste the information from the documented system.
+Write code that will do the copy-pasting, reformatting, extracting, transformation needed for the documentation.
+
+Jamal does it for this blog and the Jamal source of the blog articles are available in a public Git repository:
+
+link:{%JAVAX0_GITHUB%}[{%JAVAX0_GITHUB%}]
+
+In addition to the source of the articles the source for the build environment is also in the repository.
+You are free to use them to start your own blog if you like.
+The license for them is Apache 2.0 as denoted by the `LICENSE` file in the repo root.
+
 {%section Blog content is free to redistribute%}
-{%section The license allows modification%}
+
+There is no technical blocker, since the code is available open source.
+The license is fairly permissive, CC-BY.
+I even encourage redistribution.
+I have an agreement for many years with DZone, and JCG as you can see on the opening page.
+I also had a discussion with Baeldung, but their policy does not fit redistribution.
+
+Articles from the blog can be found on Chinese, Russian and Hindi sites.
+You can also feel free to copy, modify, translate as long you follow attribution CC-BY.
+
 {%section Supports the integrity of the author's code%}
+
+When the article is modified you have to note it in the attribution so that the readers will know that it is a derivative.
+Using the back linking they can easily see the difference between the original and the derived work.
+
 {%section No discrimination against persons or groups%}
+
+I am not racist.
+There is no need to say more about it.
+
 {%section No discrimination against fields of endeavor%}
-{%section Distribution of license%}
-{%section License must not be specific to a product%}
-{%section License must not restrict other software%}
-{%section License must be technology-neutral%}
+
+This is the part that makes me a bit uncomfortable, but what can I do.
+If you use the content of my articles to destroy the universe I must be OK with it.
+
+{%section Summary%}
+
+Use the blog!
+Do not only READ it!
+Be part of this blog!
+
+Reading is fine.
+First step.
+
+Commenting is welcome.
+
+Suggesting modifications, writing articles to be published here: the ultimate goal of being open-source blog.

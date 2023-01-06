@@ -58,7 +58,7 @@ exclude:
   - "deploy"
   - "build"
   - "run"
-  - "README.adoc"
+  - "README.adoc.jam"
   - "LICENSE"
 #  - .sass-cache/
 #  - .jekyll-cache/

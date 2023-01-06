@@ -1,18 +1,18 @@
-
+{%@import javax0.jim%}
 
 == Javax0 Blog Source Code
 
-This is the repository that stores the source code for the blog link:https://javax0.github.io[Javax0 BLOG].
+This is the repository that stores the source code for the blog link:{%BLOG_URL%}[Javax0 BLOG].
 The blog is structured using Jekyll site builder.
 The articles are written in Asciidoc, and they use Jamal as a macro language.
 The blog is built locally on the development machine and gets deployed suing GIT.
 
-== 1. Directories
+{%section Directories%}
 
 Here is a short description what you can find in the different directories and files.
 This documentation is not complete.
 
-=== 1.1. posts
+{%subsection _posts%}
 
 This directory contains the articles.
 The article file names are `YYYY-MM-DD-article.adoc.jam`.
@@ -24,7 +24,7 @@ Also, the `.adoc` files are generated automatically while editing the `.adoc.jam
 
 * Jamal preprocessor installed in the `.asciidoctor/lib` directory of the project.
 
-=== 1.2. projects
+{%subsection _projects%}
 
 This directory contains the Java or other development projects that are used as demo for the articles.
 There is a subdirectory for each article with the same name as the article (w/o the file extensions).
@@ -32,7 +32,7 @@ For example, the article `2022-12-07-blog-posting.adoc.jam` has the correspondin
 
 One article can have zero, one or more projects.
 
-=== 1.3. docs
+{%subsection docs%}
 
 Contains the generated site.
 GitHub pages is configured to deploy from this directory and not from the branch `gh-pages`.
@@ -42,66 +42,52 @@ Jekyll generates the output to this directory as it is configured in the `_confi
   destination: docs
 
 
-=== 1.4. assets
+{%subsection assets%}
 
 Are static HTML assets, like images in the `images` directory.
 
-== 2. Files
+{%section Files%}
 
-=== 2.1. about.adoc.jam
+{%subsection about.adoc.jam%}
 
 This file os the Jamal source for the BLOG ABOUT page.
 
-=== 2.2. build
+{%subsection build%}
 
 Shell scripts, build the site.
 
 [source]
 ----
-#!/bin/bash
-make
-bundle exec jekyll build --incremental
+{%@include [verbatim] build%}
 ----
 
 
 
-=== 2.3. deploy
+{%subsection deploy%}
 
 Shell script, invokes `.build`, then adds, commits and pushes the new and modified pages.
 
 [source]
 ----
-#!/bin/sh
-./build
-git add --all docs
-git commit -m "deploy"
-git push
-open https://javax0.github.io
+{%@include [verbatim] deploy%}
 ----
 
 
-=== 2.4. run
+{%subsection run%}
 
 Shell script, runs Jekyll locally.
 
 [source]
 ----
-#!/bin/sh
-./build
-open http://localhost:4000
-bundle exec jekyll serve
+{%@include [verbatim] run%}
 ----
 
-=== 2.5. Makefile
+{%subsection Makefile%}
 
 Make file converting all `.jam` files with Jamal.
 `make` is invoked from the script `build`.
 
 [source]
 ----
-all: $(wildcard _posts/*.adoc)
-	@echo done all
-
-_posts/%.adoc : _posts/%.adoc.jam
-	jbang jamal@verhas -open='{%' -close='%}' $@.jam $@
+{%@include [verbatim] Makefile%}
 ----

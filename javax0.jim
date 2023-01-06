@@ -8,17 +8,49 @@ define the 'section', 'subsection' and 'subsubsection' macros that number the in
 {@define subsection($x)==== {scount last}.{sscount}. $x{@counter:define id=:ssscount}}
 {@define subsubsection($x)===== {scount last}.{sscount last}.{ssscount}. $x}
 
+{@define BLOG_URL=https://javax0.github.io}
 
 {@define article($fileName,$refText)=link:/{@replace (regex) |$fileName|(\d)-|$1/|}.html[$refText]}
 {@define liquid($x)={@escape* `liquid`{`liquid`} $x {@escape* `liquid`}`liquid`}}
 {@define raw($x)={liquid raw}$x{liquid endraw}}
 
+------------------------------------------------------------------------------------------------------------------------
+When adding a picture to the blog as PNG add it to the MASTER branch and push it to the server using './build'
+That way the article can reference the image with a full URL which works in the generated article as well as in the IntelliJ.
+Currently there is no known solution where the reference to an image is relative and works in the IDE as well as in the generated article.
+
 {@define png($x,...$Y)=image::https://javax0.github.io/assets/images/$x.png[$Y]}
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+List the given snippet as Java source code with lines numbered.
 
 {@define java($X)=[source,java]
 ----
 {@snip (actions=number,trim format="%2d. ") $X}
 ----}
+------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+List the output of some code saved to a file including the file verbatim.
+The argument to the macro is the name of the file.
+The location of the file has to be the project root directory.
+
+{@define sampleOutput($X)=[source,text]
+----
+{#include [verbatim] ../_projects/{ARTICLE}/$X}
+----}
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+Different disclaimers
+
 
 {@define articleDisclaimer=
 [%collapsible,title=Article Management Technical Details]
@@ -68,8 +100,4 @@ Note that this repository also contains the demonstration sample source code.
 For other aspects of commenting read the link:https://javax0.github.io/about/[ABOUT] page of this blog.
 ****
 ====}
-
-{@define sampleOutput($X)=[source,text]
-----
-{#include [verbatim] ../_projects/{ARTICLE}/$X}
-----}
+------------------------------------------------------------------------------------------------------------------------
